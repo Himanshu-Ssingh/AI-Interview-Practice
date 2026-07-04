@@ -18,3 +18,61 @@ body,
 .highlight{
     color: #d20d3b;
 }
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background-color: #0d1117;
+    border-bottom: 1px solid #2a3348;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #ff2d78;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    .navbar-user {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .user-greeting {
+        font-size: 0.875rem;
+        color: #7d8590;
+        font-weight: 500;
+    }
+
+    .logout-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid #ff2d78;
+        color: #ff2d78;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #ff2d78;
+            color: #fff;
+        }
+    }
+}
