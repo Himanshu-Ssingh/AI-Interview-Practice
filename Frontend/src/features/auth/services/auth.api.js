@@ -18,7 +18,7 @@ export async function register({ username, email, password }) {
     } catch (err) {
 
         console.log(err)
-        return null
+        return { error: true, message: err.response?.data?.message || err.message || "Network Error: Unable to connect to backend server." }
 
     }
 
@@ -36,7 +36,7 @@ export async function login({ email, password }) {
 
     } catch (err) {
         console.log(err)
-        return null
+        return { error: true, message: err.response?.data?.message || err.message || "Network Error: Unable to connect to backend server." }
     }
 
 }
@@ -50,7 +50,7 @@ export async function logout() {
 
     } catch (err) {
         console.log(err)
-        return null
+        return { error: true, message: err.response?.data?.message || err.message }
     }
 }
 

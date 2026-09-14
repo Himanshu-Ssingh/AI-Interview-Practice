@@ -17,6 +17,7 @@ export const useAuth = () => {
             return data
         } catch (err) {
             console.error(err)
+            return { error: true, message: err.message }
         } finally {
             setLoading(false)
         }
@@ -32,10 +33,12 @@ export const useAuth = () => {
             return data
         } catch (err) {
             console.error(err)
+            return { error: true, message: err.message }
         } finally {
             setLoading(false)
         }
     }
+
 
     const handleLogout = async () => {
         setLoading(true)
